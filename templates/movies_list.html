@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movies</title>
+</head>
+<body style="background-color: #e0e0e0;">
+    <h1>{{ message }}</h1>
+    <table>
+        {% for movie in movies %}
+            <tr>
+                <td>
+                    <img src="{{ movie.poster.url }}" alt="{{ movie.title }}" height="300">
+                    <br>
+                    {{ movie.title }} {{ movie.release_year }}
+                    <br>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete Movie</title>
+</head>
+<body>
+    <h1>Delete Movie</h1>
+    <p>Are you sure you want to delete the following movie?</p>
+    <p>Name: {{ movie.title }}</p>
+    <p>Director: {{ movie.director }}</p>
+    <p>Release Year: {{ movie.release_year }}</p>
+    <p>Description: {{ movie.description }}</p>
+
+    <form action="{% url 'movie_delete_url' movie.id %}" method="post">
+        {% csrf_token %}
+        <input type="submit" value="Yes, Delete">
+    </form>
+
+    <a href="{% url 'movies_list_url' %}">Cancel</a>
+</body>
+</html>

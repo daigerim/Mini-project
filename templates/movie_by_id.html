@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie By Id</title>
+</head>
+<body style="background-color: #e0e0e0;">
+    <p>Name: {{ movie.title }}</p>
+    <img src="{{ movie.poster.url }}" alt="{{ movie.title }}" height="300">
+    <p>Director: {{ movie.director }}</p>
+    <p>Release Year: {{ movie.release_year }}</p>
+    <p>Description: {{ movie.description }}</p>
+    {% for genre in genres %}
+        <p>Genre: {{ genre.name }}</p>
+    {% endfor %}
+</body>
+</html>

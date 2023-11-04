@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Movie</title>
+</head>
+<body>
+    <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <p>
+            <label for="title">Input Movie Title:</label>
+            <input type="text" id="title" name="title" required>
+        </p>
+
+        <p>
+            <label for="director">Input Director Name:</label>
+            <input type="text" id="director" name="director" required>
+        </p>
+
+        <p>
+            <label for="release_year">Input Release Year:</label>
+            <input type="number" id="release_year" name="release_year" required>
+        </p>
+
+        <p>
+            <label for="genre">Input Genre:</label>
+            <input type="text" id="genre" name="genre" required>
+        </p>
+
+        <p>
+            <label for="poster">Input Movie Poster:</label>
+            <input type="file" id="poster" name="poster">
+        </p>
+
+        <p>
+            <label for="description">Input Description:</label>
+            <textarea id="description" name="description" required></textarea>
+        </p>
+
+        <input type="submit" value="Create Movie">
+    </form>
+</body>
+</html>
